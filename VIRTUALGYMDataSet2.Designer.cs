@@ -20,9 +20,9 @@ namespace VirtualGym {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("VIRTUALGYMDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("VIRTUALGYMDataSet2")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class VIRTUALGYMDataSet : global::System.Data.DataSet {
+    public partial class VIRTUALGYMDataSet2 : global::System.Data.DataSet {
         
         private alunoDataTable tablealuno;
         
@@ -30,7 +30,7 @@ namespace VirtualGym {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public VIRTUALGYMDataSet() {
+        public VIRTUALGYMDataSet2() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace VirtualGym {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        protected VIRTUALGYMDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected VIRTUALGYMDataSet2(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -127,7 +127,7 @@ namespace VirtualGym {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            VIRTUALGYMDataSet cln = ((VIRTUALGYMDataSet)(base.Clone()));
+            VIRTUALGYMDataSet2 cln = ((VIRTUALGYMDataSet2)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -199,9 +199,9 @@ namespace VirtualGym {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "VIRTUALGYMDataSet";
+            this.DataSetName = "VIRTUALGYMDataSet2";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/VIRTUALGYMDataSet.xsd";
+            this.Namespace = "http://tempuri.org/VIRTUALGYMDataSet2.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tablealuno = new alunoDataTable();
@@ -225,7 +225,7 @@ namespace VirtualGym {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            VIRTUALGYMDataSet ds = new VIRTUALGYMDataSet();
+            VIRTUALGYMDataSet2 ds = new VIRTUALGYMDataSet2();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -369,10 +369,10 @@ namespace VirtualGym {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public alunoRow AddalunoRow(string nome) {
+            public alunoRow AddalunoRow(int idAluno, string nome) {
                 alunoRow rowalunoRow = ((alunoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        null,
+                        idAluno,
                         nome};
                 rowalunoRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowalunoRow);
@@ -416,11 +416,7 @@ namespace VirtualGym {
                 base.Columns.Add(this.columnnome);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnidAluno}, true));
-                this.columnidAluno.AutoIncrement = true;
-                this.columnidAluno.AutoIncrementSeed = -1;
-                this.columnidAluno.AutoIncrementStep = -1;
                 this.columnidAluno.AllowDBNull = false;
-                this.columnidAluno.ReadOnly = true;
                 this.columnidAluno.Unique = true;
                 this.columnnome.AllowDBNull = false;
                 this.columnnome.MaxLength = 50;
@@ -491,7 +487,7 @@ namespace VirtualGym {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                VIRTUALGYMDataSet ds = new VIRTUALGYMDataSet();
+                VIRTUALGYMDataSet2 ds = new VIRTUALGYMDataSet2();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -622,7 +618,7 @@ namespace VirtualGym {
         }
     }
 }
-namespace VirtualGym.VIRTUALGYMDataSetTableAdapters {
+namespace VirtualGym.VIRTUALGYMDataSet2TableAdapters {
     
     
     /// <summary>
@@ -758,14 +754,14 @@ namespace VirtualGym.VIRTUALGYMDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_nome", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nome", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[aluno] SET [nome] = @nome WHERE (([idAluno] = @Original_idAluno) AN" +
-                "D ([nome] = @Original_nome));\r\nSELECT idAluno, nome FROM aluno WHERE (idAluno = " +
-                "@idAluno)";
+            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[aluno] SET [idAluno] = @idAluno, [nome] = @nome WHERE (([idAluno] =" +
+                " @Original_idAluno) AND ([nome] = @Original_nome));\r\nSELECT idAluno, nome FROM a" +
+                "luno WHERE (idAluno = @idAluno)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idAluno", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idAluno", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nome", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nome", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idAluno", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idAluno", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_nome", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nome", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idAluno", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "idAluno", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -778,22 +774,18 @@ namespace VirtualGym.VIRTUALGYMDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT idAluno, nome FROM dbo.aluno";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT idAluno, nome FROM dbo.aluno";
-            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(VIRTUALGYMDataSet.alunoDataTable dataTable) {
+        public virtual int Fill(VIRTUALGYMDataSet2.alunoDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -806,9 +798,9 @@ namespace VirtualGym.VIRTUALGYMDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual VIRTUALGYMDataSet.alunoDataTable GetData() {
+        public virtual VIRTUALGYMDataSet2.alunoDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            VIRTUALGYMDataSet.alunoDataTable dataTable = new VIRTUALGYMDataSet.alunoDataTable();
+            VIRTUALGYMDataSet2.alunoDataTable dataTable = new VIRTUALGYMDataSet2.alunoDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -816,27 +808,14 @@ namespace VirtualGym.VIRTUALGYMDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillBy(VIRTUALGYMDataSet.alunoDataTable dataTable) {
-            this.Adapter.SelectCommand = this.CommandCollection[1];
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(VIRTUALGYMDataSet.alunoDataTable dataTable) {
+        public virtual int Update(VIRTUALGYMDataSet2.alunoDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(VIRTUALGYMDataSet dataSet) {
+        public virtual int Update(VIRTUALGYMDataSet2 dataSet) {
             return this.Adapter.Update(dataSet, "aluno");
         }
         
@@ -887,21 +866,21 @@ namespace VirtualGym.VIRTUALGYMDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string nome, int Original_idAluno, string Original_nome, int idAluno) {
+        public virtual int Update(int idAluno, string nome, int Original_idAluno, string Original_nome) {
+            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(idAluno));
             if ((nome == null)) {
                 throw new global::System.ArgumentNullException("nome");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(nome));
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(nome));
             }
-            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(Original_idAluno));
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Original_idAluno));
             if ((Original_nome == null)) {
                 throw new global::System.ArgumentNullException("Original_nome");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Original_nome));
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Original_nome));
             }
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(idAluno));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -923,7 +902,7 @@ namespace VirtualGym.VIRTUALGYMDataSetTableAdapters {
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
         public virtual int Update(string nome, int Original_idAluno, string Original_nome) {
-            return this.Update(nome, Original_idAluno, Original_nome, Original_idAluno);
+            return this.Update(Original_idAluno, nome, Original_idAluno, Original_nome);
         }
     }
     
@@ -1018,7 +997,7 @@ namespace VirtualGym.VIRTUALGYMDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateUpdatedRows(VIRTUALGYMDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(VIRTUALGYMDataSet2 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._alunoTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.aluno.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
@@ -1037,7 +1016,7 @@ namespace VirtualGym.VIRTUALGYMDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateInsertedRows(VIRTUALGYMDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(VIRTUALGYMDataSet2 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._alunoTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.aluno.Select(null, null, global::System.Data.DataViewRowState.Added);
@@ -1055,7 +1034,7 @@ namespace VirtualGym.VIRTUALGYMDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateDeletedRows(VIRTUALGYMDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(VIRTUALGYMDataSet2 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._alunoTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.aluno.Select(null, null, global::System.Data.DataViewRowState.Deleted);
@@ -1097,7 +1076,7 @@ namespace VirtualGym.VIRTUALGYMDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public virtual int UpdateAll(VIRTUALGYMDataSet dataSet) {
+        public virtual int UpdateAll(VIRTUALGYMDataSet2 dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

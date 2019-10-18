@@ -16,7 +16,7 @@ namespace VirtualGym.Database
             try
             {
                 
-                Conn.ConnectionString = @"Data Source=127.0.0.1;Initial Catalog=VIRTUALGYM;User ID=sa;Password=@Lcm2020"; //BASE OFICIAL                
+                Conn.ConnectionString = @"Data Source=localhost;Initial Catalog=VIRTUALGYM;User ID=sa;Password=@Lcm2020"; //BASE OFICIAL                
                 Conn.Open();
                 SqlCommand cmdComando = new SqlCommand();
                 cmdComando.CommandText = strQuery;

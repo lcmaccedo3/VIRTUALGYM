@@ -44,6 +44,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="engineDb.cs" />
+    <Compile Include="Manutenção de Pagamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manutenção de Pagamento.Designer.cs">
+      <DependentUpon>Manutenção de Pagamento.cs</DependentUpon>
+    </Compile>
     <Compile Include="formAluno.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,11 +64,27 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VIRTUALGYMDataSet.cs">
+      <DependentUpon>VIRTUALGYMDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="VIRTUALGYMDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>VIRTUALGYMDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="VIRTUALGYMDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VIRTUALGYMDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="VIRTUALGYMDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VIRTUALGYMDataSet2.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Manutenção de Pagamento.resx">
+      <DependentUpon>Manutenção de Pagamento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="formAluno.resx">
       <DependentUpon>formAluno.cs</DependentUpon>
     </EmbeddedResource>
@@ -79,6 +101,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="app.config" />
+    <None Include="Properties\DataSources\VirtualGym.Database.engineDb.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -98,6 +121,28 @@
     </None>
     <None Include="VIRTUALGYMDataSet.xss">
       <DependentUpon>VIRTUALGYMDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="VIRTUALGYMDataSet1.xsc">
+      <DependentUpon>VIRTUALGYMDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="VIRTUALGYMDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VIRTUALGYMDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VIRTUALGYMDataSet1.xss">
+      <DependentUpon>VIRTUALGYMDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="VIRTUALGYMDataSet2.xsc">
+      <DependentUpon>VIRTUALGYMDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="VIRTUALGYMDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VIRTUALGYMDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VIRTUALGYMDataSet2.xss">
+      <DependentUpon>VIRTUALGYMDataSet2.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

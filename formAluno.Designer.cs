@@ -69,6 +69,7 @@
             this.btnBiometria.TabIndex = 0;
             this.btnBiometria.Text = "Biometria";
             this.btnBiometria.UseVisualStyleBackColor = true;
+            this.btnBiometria.Click += new System.EventHandler(this.BtnBiometria_Click);
             // 
             // btnGrv
             // 
@@ -86,8 +87,9 @@
             this.btnCanc.Name = "btnCanc";
             this.btnCanc.Size = new System.Drawing.Size(120, 23);
             this.btnCanc.TabIndex = 2;
-            this.btnCanc.Text = "Cancelar";
+            this.btnCanc.Text = "Sair";
             this.btnCanc.UseVisualStyleBackColor = true;
+            this.btnCanc.Click += new System.EventHandler(this.BtnCanc_Click_1);
             // 
             // txtNome
             // 
@@ -112,6 +114,7 @@
             // 
             // cmbUF
             // 
+            this.cmbUF.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbUF.FormattingEnabled = true;
             this.cmbUF.Items.AddRange(new object[] {
             "AC",
@@ -175,6 +178,7 @@
             // 
             // txtPlano
             // 
+            this.txtPlano.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.txtPlano.FormattingEnabled = true;
             this.txtPlano.Items.AddRange(new object[] {
             "1 - Mensal",
@@ -199,7 +203,6 @@
             this.lblID.Size = new System.Drawing.Size(18, 13);
             this.lblID.TabIndex = 14;
             this.lblID.Text = "ID";
-            this.lblID.Click += new System.EventHandler(this.Label1_Click);
             // 
             // label1
             // 
@@ -357,20 +360,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnBiometria;
-        private System.Windows.Forms.Button btnGrv;
-        private System.Windows.Forms.Button btnCanc;
-        private System.Windows.Forms.TextBox txtNome;
-        private System.Windows.Forms.TextBox txtCPF;
-        private System.Windows.Forms.TextBox txtRG;
-        private System.Windows.Forms.ComboBox cmbUF;
-        private System.Windows.Forms.TextBox txtCidade;
-        private System.Windows.Forms.TextBox txtCEP;
-        private System.Windows.Forms.TextBox txtBairro;
-        private System.Windows.Forms.TextBox txtEndereco;
-        private System.Windows.Forms.ComboBox txtPlano;
-        private System.Windows.Forms.DateTimePicker dtMatricula;
         private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -386,5 +375,18 @@
         private System.Windows.Forms.BindingSource alunoBindingSource;
         private VIRTUALGYMDataSetTableAdapters.alunoTableAdapter alunoTableAdapter;
         public System.Windows.Forms.MaskedTextBox mskID;
+        public System.Windows.Forms.Button btnBiometria;
+        public System.Windows.Forms.Button btnGrv;
+        public System.Windows.Forms.Button btnCanc;
+        public System.Windows.Forms.TextBox txtNome;
+        public System.Windows.Forms.TextBox txtCPF;
+        public System.Windows.Forms.TextBox txtRG;
+        public System.Windows.Forms.ComboBox cmbUF;
+        public System.Windows.Forms.TextBox txtCidade;
+        public System.Windows.Forms.TextBox txtCEP;
+        public System.Windows.Forms.TextBox txtBairro;
+        public System.Windows.Forms.TextBox txtEndereco;
+        public System.Windows.Forms.ComboBox txtPlano;
+        public System.Windows.Forms.DateTimePicker dtMatricula;
     }
 }
